@@ -1,0 +1,4 @@
+# Senha do Wi-Fi: nunca vai para o repositório.
+**/config.h
+**/.pio/
+**/.vscode/
