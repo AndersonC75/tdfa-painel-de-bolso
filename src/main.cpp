@@ -219,7 +219,9 @@ static void desenhaManchete() {
   auto& d = canvas;
   cabecalho("Ultima noticia");
   d.setTextColor(BRANCO, PRETO);
-  d.setTextSize(2);
+  // Manchete longa no tamanho grande passa por cima do rodapé (cabem 4 linhas
+  // de 20 letras). Acima de 80 letras, cai para o tamanho pequeno.
+  d.setTextSize(strlen(manchete) > 80 ? 1 : 2);
   d.setTextWrap(true);
   d.setCursor(4, 30);
   d.print(manchete[0] ? manchete : "buscando...");
